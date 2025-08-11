@@ -72,6 +72,7 @@
                       joint_limits="${xacro.load_yaml('$(find franka_description)/robots/fp3/joint_limits.yaml')}"
                       inertials="${xacro.load_yaml('$(find franka_description)/robots/fp3/inertials.yaml')}"
                       kinematics="${xacro.load_yaml('$(find franka_description)/robots/fp3/kinematics.yaml')}"
+                      accelerometer_config="${xacro.load_yaml('$(find franka_description)/robots/fp3/accelerometers.yaml')}"
                       dynamics="${xacro.load_yaml('$(find franka_description)/robots/fp3/dynamics.yaml')}"
                       gazebo="$(arg gazebo)"
                       hand="$(arg hand)"
