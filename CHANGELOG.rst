@@ -2,6 +2,10 @@
 Changelog for package franka_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+UNRELEASED
+----------
+* feat: added accelerometer frames to urdfs
+
 1.0.2 (2025-08-01)
 ---------------
 * fix: gazebo can be used with prefixes

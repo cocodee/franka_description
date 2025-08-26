@@ -91,12 +91,14 @@
   
   <xacro:arg name="inertials_path" default="$(find franka_description)/robots/${arm_id_i}/inertials.yaml"/>
   <xacro:arg name="kinematics_path" default="$(find franka_description)/robots/${arm_id_i}/kinematics.yaml"/>
+  <xacro:arg name="accelerometers_path" default="$(find franka_description)/robots/${arm_id_i}/accelerometers.yaml"/>
   <xacro:arg name="dynamics_path" default="$(find franka_description)/robots/${arm_id_i}/dynamics.yaml"/>
   <xacro:arg name="joint_limits_path" default="$(find franka_description)/robots/${arm_id_i}/joint_limits.yaml"/>
   <xacro:franka_robot arm_id="${arm_id_i}"
                       joint_limits="${xacro.load_yaml('$(arg joint_limits_path)')}"
                       inertials="${xacro.load_yaml('$(arg inertials_path)')}"
                       kinematics="${xacro.load_yaml('$(arg kinematics_path)')}"
+                      accelerometers="${xacro.load_yaml('$(arg accelerometers_path)')}"
                       dynamics="${xacro.load_yaml('$(arg dynamics_path)')}"
                       gazebo="$(arg gazebo)"
                       hand="$(arg hand)"

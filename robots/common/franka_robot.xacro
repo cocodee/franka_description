@@ -4,6 +4,7 @@
               params="arm_id
                       joint_limits
                       kinematics
+                      accelerometer_config:=none
                       inertials
                       dynamics
                       parent:='world'
@@ -43,6 +44,7 @@
       gazebo="${gazebo}"
       joint_limits="${joint_limits}"
       kinematics="${kinematics}"
+      accelerometer_config="${accelerometer_config}"
       inertials="${inertials}"
       dynamics="${dynamics}"
       with_sc="${with_sc}"
