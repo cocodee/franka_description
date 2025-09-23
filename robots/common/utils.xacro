@@ -242,6 +242,12 @@
                          k_velocity="40.0"
                          soft_lower_limit="${limits.lower}"
                          soft_upper_limit="${limits.upper}" />
+      
+      <!-- Add position-based velocity limits if they exist -->
+      <xacro:if value="${'position_based_velocity_limits' in config[name]}">
+        <xacro:property name="position_based_velocity_limits" value="${config[name]['position_based_velocity_limits']}" lazy_eval="false" />
+        <position_based_velocity_limits velocity_offset="${position_based_velocity_limits.velocity_offset}" deceleration_limit="${position_based_velocity_limits.deceleration_limit}" />
+      </xacro:if>
   </xacro:macro>
 
   <!-- ========================================================================= -->
