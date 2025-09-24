@@ -2,7 +2,7 @@
 Changelog for package franka_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-UNRELEASED
+1.1.0
 ----------
 * feat: added accelerometer frames to urdfs
 * feat: update joint limits for fr3v2 and fr3
