@@ -2,6 +2,10 @@
 Changelog for package franka_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+UNRELEASED
+----------
+* fix: add fp3 robot joint limits
+
 1.1.0
 ----------
 * feat: added accelerometer frames to urdfs
