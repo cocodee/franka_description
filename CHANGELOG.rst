@@ -6,6 +6,7 @@ UNRELEASED
 ----------
 * fix: add fp3 robot joint limits
 * fix: group definition in SRDF file checking for right TCP
+* feat: add fr3v2.1 robot variant
 
 1.1.0
 ----------
