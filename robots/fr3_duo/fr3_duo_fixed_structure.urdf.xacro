@@ -14,6 +14,6 @@
 
   <xacro:arg name="cover_kinematics" default="$(find franka_description)/robots/fr3_duo/fr3_duo_cover/kinematics.yaml"/>
   <xacro:cover name="cover" parent="mount_link" inertials="${xacro.load_yaml('$(find franka_description)/robots/fr3_duo/fr3_duo_cover/inertials.yaml')}">
-      <origin xyz="0 0 0" rpy="0 0 0" />
+      <origin xyz="0 0 0.068" rpy="0 0 0" />
   </xacro:cover>
 </robot>

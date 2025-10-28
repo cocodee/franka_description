@@ -74,9 +74,8 @@
       <origin xyz="0 0 0" rpy="0 0 0" />
   </xacro:mount>
 
-  <xacro:arg name="cover_kinematics" default="$(find franka_description)/robots/fr3_duo/fr3_duo_cover/kinematics.yaml"/>
   <xacro:cover name="cover" parent="mount_link" inertials="${xacro.load_yaml('$(find franka_description)/robots/fr3_duo/fr3_duo_cover/inertials.yaml')}">
-      <origin xyz="0 0 0" rpy="0 0 0" />
+      <origin xyz="0 0 0.068" rpy="0 0 0" />
   </xacro:cover>
 
   <xacro:property name="number_of_robots" value = "2"/>
@@ -104,11 +103,13 @@
       <xacro:arg name="kinematics_path" default="$(find franka_description)/robots/${arm_id_i}/kinematics.yaml"/>
       <xacro:arg name="dynamics_path" default="$(find franka_description)/robots/${arm_id_i}/dynamics.yaml"/>
       <xacro:arg name="joint_limits_path" default="$(find franka_description)/robots/${arm_id_i}/joint_limits.yaml"/>
+      <xacro:arg name="accelerometers_path" default="$(find franka_description)/robots/${arm_id_i}/accelerometers.yaml"/>
       <xacro:franka_robot arm_id="${arm_id_i}"
                           joint_limits="${xacro.load_yaml('$(arg joint_limits_path)')}"
                           inertials="${xacro.load_yaml('$(arg inertials_path)')}"
-                          kinematics="${xacro.load_yaml('$(arg kinematics_path)')}"
+                          kinematics="${xacro.load_yaml('$(arg kinematics_path')}"
                           dynamics="${xacro.load_yaml('$(arg dynamics_path)')}"
+                          accelerometer_config="${xacro.load_yaml('$(arg accelerometers_path)')}"
                           gazebo="$(arg gazebo)"
                           hand="$(arg hand)"
                           ee_id="$(arg ee_id)"
