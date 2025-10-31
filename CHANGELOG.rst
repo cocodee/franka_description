@@ -2,6 +2,10 @@
 Changelog for package franka_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+UNRELEASED
+----------
+* feat: updated kinematics, meshes, inertials, materials for fr3_duo mount and cover
+
 1.3.0 (2025-10-31)
 ------------------
 * fix: group definition in SRDF file checking for right TCP
