@@ -1,3 +1,5 @@
 *.pyc
 *.urdf
 *.env
+*.srdf
+.vscode

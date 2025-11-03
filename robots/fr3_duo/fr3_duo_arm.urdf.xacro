@@ -98,7 +98,7 @@
                       joint_limits="${xacro.load_yaml('$(arg joint_limits_path)')}"
                       inertials="${xacro.load_yaml('$(arg inertials_path)')}"
                       kinematics="${xacro.load_yaml('$(arg kinematics_path)')}"
-                      accelerometers="${xacro.load_yaml('$(arg accelerometers_path)')}"
+                      accelerometer_config="${xacro.load_yaml('$(arg accelerometers_path)')}"
                       dynamics="${xacro.load_yaml('$(arg dynamics_path)')}"
                       gazebo="$(arg gazebo)"
                       hand="$(arg hand)"
