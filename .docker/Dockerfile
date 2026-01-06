@@ -8,7 +8,9 @@ ARG USERNAME=user
 
 WORKDIR /workspaces
 
-RUN groupadd --gid $USER_GID $USERNAME \
+RUN userdel -r ubuntu || true \
+    && groupdel ubuntu || true \
+    &&  groupadd --gid $USER_GID $USERNAME \
     && useradd --uid $USER_UID --gid $USER_GID -m $USERNAME \
     && mkdir -p -m 0700 /run/user/"${USER_UID}" \
     && mkdir -p -m 0700 /run/user/"${USER_UID}"/gdm \
