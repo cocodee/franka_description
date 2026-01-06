@@ -1,1 +1,1 @@
-./scripts/create_urdf.sh --robot-ee cobot_pump --abs-path --host-dir . --no-prefix fr3
+./scripts/create_urdf.sh --robot-ee franka_hand  --abs-path --host-dir . --no-prefix fr3
