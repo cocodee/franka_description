@@ -2,3 +2,4 @@
 urdfs/
 *.env
 .vscode
+.DS_Store
