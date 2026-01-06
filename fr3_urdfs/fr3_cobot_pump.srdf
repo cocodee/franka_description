@@ -5,7 +5,7 @@
 <!-- =================================================================================== -->
 <robot name="fr3">
   <group name="arm">
-    <chain base_link="link0" tip_link="hand_tcp"/>
+    <chain base_link="link0" tip_link="link8"/>
   </group>
   <group_state group="arm" name="ready">
     <joint name="joint1" value="0"/>
@@ -49,38 +49,4 @@
   <disable_collisions link1="link6" link2="link7" reason="Adjacent"/>
   <disable_collisions link1="link6" link2="link8" reason="Default"/>
   <disable_collisions link1="link7" link2="link8" reason="Adjacent"/>
-  <group name="hand">
-    <link name="hand"/>
-    <link name="leftfinger"/>
-    <link name="rightfinger"/>
-    <joint name="finger_joint1"/>
-    <passive_joint name="finger_joint2"/>
-  </group>
-  <group_state group="hand" name="open">
-    <joint name="finger_joint1" value="0.035"/>
-    <joint name="finger_joint2" value="0.035"/>
-  </group_state>
-  <group_state group="hand" name="close">
-    <joint name="finger_joint1" value="0"/>
-    <joint name="finger_joint2" value="0"/>
-  </group_state>
-  <end_effector group="hand" name="hand" parent_group="arm" parent_link="hand_tcp"/>
-  <disable_collisions link1="hand" link2="leftfinger" reason="Adjacent"/>
-  <disable_collisions link1="hand" link2="rightfinger" reason="Adjacent"/>
-  <disable_collisions link1="leftfinger" link2="rightfinger" reason="Default"/>
-  <disable_collisions link1="hand" link2="link3" reason="Never"/>
-  <disable_collisions link1="hand" link2="link4" reason="Never"/>
-  <disable_collisions link1="hand" link2="link6" reason="Never"/>
-  <disable_collisions link1="hand" link2="link7" reason="Adjacent"/>
-  <disable_collisions link1="hand" link2="link8" reason="Adjacent"/>
-  <disable_collisions link1="leftfinger" link2="link3" reason="Never"/>
-  <disable_collisions link1="leftfinger" link2="link4" reason="Never"/>
-  <disable_collisions link1="leftfinger" link2="link6" reason="Never"/>
-  <disable_collisions link1="leftfinger" link2="link7" reason="Never"/>
-  <disable_collisions link1="leftfinger" link2="link8" reason="Never"/>
-  <disable_collisions link1="link3" link2="rightfinger" reason="Never"/>
-  <disable_collisions link1="link4" link2="rightfinger" reason="Never"/>
-  <disable_collisions link1="link6" link2="rightfinger" reason="Never"/>
-  <disable_collisions link1="link7" link2="rightfinger" reason="Never"/>
-  <disable_collisions link1="link8" link2="rightfinger" reason="Never"/>
 </robot>
